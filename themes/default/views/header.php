@@ -75,7 +75,7 @@
                 <nav class="sidebar-inner collapse navbar-collapse bs-navbar-collapse2" role="navigation" style="padding:0;">
                     <ul class="navi">
                         <li class="nred"><a class="mm_home" href="<?= base_url(); ?>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-                        <li class="nblue"> <a class="mm_reports" href="<?=site_url('trip');?>"> <i class="fa fa-bar-chart-o"></i> 
+                        <li class="nblue"> <a class="mm_reports" href="<?=site_url('trips');?>"> <i class="fa fa-bar-chart-o"></i> 
                             <?= lang('Trip'); ?> <span class="pull-right"></span> </a>
 
                         <li class="has_submenu nlightblue"> <a class="mm_sales" href="#"> <i class="fa fa-file-text"></i> <?= lang('sales'); ?> <span class="pull-right"><b class="fa fa-sort-down"></b></span> </a>

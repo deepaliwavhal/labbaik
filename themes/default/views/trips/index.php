@@ -52,7 +52,7 @@ if ($customer_id) {$v .= '&customer_id=' . $customer_id;}
             { extend: 'colvis', text: 'Columns'},
             ],
             "columns": [
-            { "data": "id" },
+            { "data": "id", "searchable": false, "visible": false },
             { "data": "name" },
             { "data": "price" },
             { "data": "hotel" },
