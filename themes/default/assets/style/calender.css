@@ -1,0 +1,12 @@
+/* --- 4.x DASHBOARD ICONS MENU --- */
+.cl_wday {
+	text-align: center;
+	font-weight:bold;
+}
+.cl_equal { width: 14%; }
+
+.cl_left { width: 50%; float: left; text-align:left; } 
+
+.cl_right { width: 50%; float: right; text-align:right; font-weight:bold; }
+
+.highlight { color: #0088CC; font-weight:bold;}
