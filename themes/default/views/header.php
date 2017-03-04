@@ -76,7 +76,7 @@
                     <ul class="navi">
                         <li class="nred"><a class="mm_home" href="<?= base_url(); ?>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
                         <li class="nblue"> <a class="mm_reports" href="<?=site_url('trips');?>"> <i class="fa fa-bar-chart-o"></i> 
-                            <?= lang('Trip'); ?> <span class="pull-right"></span> </a>
+                            <?= lang('Trips'); ?> <span class="pull-right"></span> </a>
 
                         <li class="has_submenu nlightblue"> <a class="mm_sales" href="#"> <i class="fa fa-file-text"></i> <?= lang('sales'); ?> <span class="pull-right"><b class="fa fa-sort-down"></b></span> </a>
                             <ul>
