@@ -587,5 +587,8 @@ $lang['airline']                    = "Airline";
 $lang['max_capacity']               = "Maximum Capacity";
 $lang['from_date']                  = "From date";
 $lang['to_date']                    = "To Date";
+$lang['total_days']                 = "Total Days";
+$lang['fromdate']                 = "From";
+$lang['todate']                 = "To";
 
 

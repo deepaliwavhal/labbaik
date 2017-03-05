@@ -21,7 +21,7 @@
                     <div class="controls"> <?= form_input('tour_price', (isset($_POST['tour_price']) ? $_POST['tour_price'] : $trip->t_price), 'class="form-control" id="tour_price"');?>
                     </div>
                 </div> 
-                <div class="form-group">
+                <!--<div class="form-group">
                     <label for="tour_agent"><?= lang("Agent"); ?></label>
                     <div class="controls"> <?= form_input('tour_agent', (isset($_POST['tour_agent']) ? $_POST['tour_agent'] : $trip->t_agent), 'class="form-control" id="tour_agent"');?>
                     </div>
@@ -59,7 +59,7 @@ echo form_dropdown('tour_airline', $airline_list, (isset($_POST['tour_airline'])
                         ?>
                     </div>
                 </div>
-                
+                -->
                 <div class="form-group">
                     <label for="tour_max_capacity"><?= lang("max_capacity"); ?></label>
                     <div class="controls"> <?= form_input('tour_max_capacity', (isset($_POST['tour_max_capacity']) ? $_POST['tour_max_capacity'] : $trip->t_max_capacity), 'class="form-control" id="tour_max_capacity"');?>
