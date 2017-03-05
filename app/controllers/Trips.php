@@ -70,7 +70,7 @@ class Trips extends MY_Controller {
         $this->load->library('datatables');
         //(CASE WHEN users.first_name is null THEN sales.user ELSE CONCAT(users.first_name, ' ', users.last_name) END) as user
         $this->datatables
-            ->select("{$this->db->dbprefix($tablename)}.t_id as id, t_name as name, t_price as price, DATEDIFF(t_todate, t_fromdate) as total_days, lb_airlines.a_name as airline, t_max_capacity as max_capacity, t_fromdate as fromdate, t_todate as todate, t_country as country, t_city as city", FALSE)
+            ->select("{$this->db->dbprefix($tablename)}.t_id as id, t_name as name, t_price as price, lb_hotels.h_name as hotel, lb_airlines.a_name as airline, t_max_capacity as max_capacity, t_country as country, t_city as city", FALSE)
             ->from($tablename)
             ->join('lb_hotels', 'lb_hotels.h_id=lb_trips.t_hotel', 'left')
             ->join('lb_airlines', 'lb_airlines.a_id=lb_trips.t_airline', 'left')
@@ -109,9 +109,9 @@ class Trips extends MY_Controller {
 		$this->form_validation->set_rules('tour_name', $this->lang->line("Title"), 'required');
 		$this->form_validation->set_rules('tour_description', $this->lang->line("description"), 'required');
 		$this->form_validation->set_rules('tour_price', $this->lang->line("price"), 'required');
-                //$this->form_validation->set_rules('tour_agent', $this->lang->line("Agent"), 'required');
-                //$this->form_validation->set_rules('tour_hotel', $this->lang->line("Hotel"), 'required');
-                //$this->form_validation->set_rules('tour_airline', $this->lang->line("airline"), 'required');
+                $this->form_validation->set_rules('tour_agent', $this->lang->line("Agent"), 'required');
+                $this->form_validation->set_rules('tour_hotel', $this->lang->line("Hotel"), 'required');
+                $this->form_validation->set_rules('tour_airline', $this->lang->line("airline"), 'required');
                 $this->form_validation->set_rules('tour_max_capacity', $this->lang->line("max_capacity"), 'required');                
                 $this->form_validation->set_rules('tour_from_date', $this->lang->line("from_date"), 'required');
 		$this->form_validation->set_rules('tour_to_date', $this->lang->line("to_date"), 'required');
@@ -124,17 +124,17 @@ class Trips extends MY_Controller {
 			$data = array('t_name' => $this->input->post('tour_name'),
                                     't_description' => $this->input->post('tour_description'),
                                     't_price' => $this->input->post('tour_price'),
-                                    //'t_hotel' => $this->input->post('tour_hotel'),
-                                    //'t_airline' => $this->input->post('tour_airline'),
-                                    //'t_agent' => $this->input->post('tour_agent'),
+                                    't_hotel' => $this->input->post('tour_hotel'),
+                                    't_airline' => $this->input->post('tour_airline'),
+                                    't_agent' => $this->input->post('tour_agent'),
                                     't_max_capacity' => $this->input->post('tour_max_capacity'),
                                     't_country' => $this->input->post('tour_country'),
                                     't_city' => $this->input->post('tour_city'),
-                                    't_fromdate' => date('Y-m-d',strtotime($this->input->post('tour_from_date'))),
-                                    't_todate' => date('Y-m-d',strtotime($this->input->post('tour_to_date')))
+                                    't_fromdate' => $this->input->post('tour_from_date'),
+                                    't_todate' => $this->input->post('tour_to_date')
 				);
 		}
-                
+
 		if ( $this->form_validation->run() == true && $this->trips_model->addTrip($data)) {
                         $this->session->set_flashdata('message', $this->lang->line("trip_added"));
 			redirect("trips");
@@ -156,9 +156,9 @@ class Trips extends MY_Controller {
 		$this->form_validation->set_rules('tour_name', $this->lang->line("Title"), 'required');
 		$this->form_validation->set_rules('tour_description', $this->lang->line("description"), 'required');
 		$this->form_validation->set_rules('tour_price', $this->lang->line("price"), 'required');
-                //$this->form_validation->set_rules('tour_agent', $this->lang->line("Agent"), 'required');
-                //$this->form_validation->set_rules('tour_hotel', $this->lang->line("Hotel"), 'required');
-                //$this->form_validation->set_rules('tour_airline', $this->lang->line("airline"), 'required');
+                $this->form_validation->set_rules('tour_agent', $this->lang->line("Agent"), 'required');
+                $this->form_validation->set_rules('tour_hotel', $this->lang->line("Hotel"), 'required');
+                $this->form_validation->set_rules('tour_airline', $this->lang->line("airline"), 'required');
                 $this->form_validation->set_rules('tour_max_capacity', $this->lang->line("max_capacity"), 'required');                
                 $this->form_validation->set_rules('tour_from_date', $this->lang->line("from_date"), 'required');
 		$this->form_validation->set_rules('tour_to_date', $this->lang->line("to_date"), 'required');
@@ -169,17 +169,17 @@ class Trips extends MY_Controller {
 			$data = array('t_name' => $this->input->post('tour_name'),
                                     't_description' => $this->input->post('tour_description'),
                                     't_price' => $this->input->post('tour_price'),
-                                    //'t_hotel' => $this->input->post('tour_hotel'),
-                                    //'t_airline' => $this->input->post('tour_airline'),
-                                    //'t_agent' => $this->input->post('tour_agent'),
+                                    't_hotel' => $this->input->post('tour_hotel'),
+                                    't_airline' => $this->input->post('tour_airline'),
+                                    't_agent' => $this->input->post('tour_agent'),
                                     't_max_capacity' => $this->input->post('tour_max_capacity'),
                                     't_country' => $this->input->post('tour_country'),
                                     't_city' => $this->input->post('tour_city'),
-                                    't_fromdate' => date('Y-m-d',strtotime($this->input->post('tour_from_date'))),
-                                    't_todate' => date('Y-m-d',strtotime($this->input->post('tour_to_date')))
+                                    't_fromdate' => $this->input->post('tour_from_date'),
+                                    't_todate' => $this->input->post('tour_to_date')
 				);
 		}
-                
+
 		if ( $this->form_validation->run() == true && $this->trips_model->updateTrip($id, $data)) {  
                         $this->session->set_flashdata('message', $this->lang->line("trip_updated"));
 			redirect("trips");

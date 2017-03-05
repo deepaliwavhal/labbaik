@@ -11,25 +11,24 @@
             
                 <div class="form-group">
                     <label for="tour_name"><?= lang("Title"); ?></label>
-                    <div class="controls"> <?= form_input('tour_name', (isset($_POST['tour_name']) ? $_POST['tour_name'] : ''), 'class="form-control" id="tour_name"');?>
+                    <div class="controls"> <?= form_input('tour_name', '', 'class="form-control" id="tour_name"');?>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="tour_description"><?= lang("description"); ?></label>
-                     <textarea class="form-control skip" id="tour_description" name="tour_description"><?php echo (isset($_POST['tour_name']) ? $_POST['tour_name'] : ''); ?></textarea>
+                     <textarea class="form-control skip" id="tour_description" name="tour_description"></textarea>
                     
                 </div> 
                 <div class="form-group">
                     <label for="tour_price"><?= lang("price"); ?></label>
-                    <div class="controls"> <?= form_input('tour_price', (isset($_POST['tour_price']) ? $_POST['tour_price'] : ''), 'class="form-control" id="tour_price"');?>
+                    <div class="controls"> <?= form_input('tour_price', '', 'class="form-control" id="tour_price"');?>
                     </div>
                 </div> 
-                 <!--
                 <div class="form-group">
                     <label for="tour_agent"><?= lang("Agent"); ?></label>
                     <div class="controls"> <?= form_input('tour_agent', '', 'class="form-control" id="tour_agent"');?>
                     </div>
-                </div>                
+                </div> 
                 <div class="form-group">
                     <label for="tour_hotel"><?= lang("Hotel"); ?></label>
                     <div class="controls">
@@ -57,23 +56,23 @@ echo form_dropdown('tour_airline', $airline_list, (isset($_POST['tour_airline'])
                         ?>
                     </div>
                 </div>
-                -->
+                
                 <div class="form-group">
                     <label for="tour_max_capacity"><?= lang("max_capacity"); ?></label>
-                    <div class="controls"> <?= form_input('tour_max_capacity', (isset($_POST['tour_max_capacity']) ? $_POST['tour_max_capacity'] : ''), 'class="form-control" id="tour_max_capacity"');?>
+                    <div class="controls"> <?= form_input('tour_max_capacity', '', 'class="form-control" id="tour_max_capacity"');?>
                     </div>
                 </div> 
                 
                 <div class="form-group">
                     <label for="tour_city"><?= lang("city"); ?></label>
-                    <div class="controls"> <?= form_input('tour_city', (isset($_POST['tour_city']) ? $_POST['tour_city'] : ''), 'class="form-control" id="tour_city"');?>
+                    <div class="controls"> <?= form_input('tour_city', '', 'class="form-control" id="tour_city"');?>
                     </div>
                 </div> 
                
                 
                 <div class="form-group">
                     <label for="tour_country"><?= lang("country"); ?></label>
-                    <div class="controls"> <?= form_input('tour_country', (isset($_POST['tour_country']) ? $_POST['tour_country'] : ''), 'class="form-control" id="tour_country"');?>
+                    <div class="controls"> <?= form_input('tour_country', '', 'class="form-control" id="tour_country"');?>
                     </div>
                 </div>
                 
