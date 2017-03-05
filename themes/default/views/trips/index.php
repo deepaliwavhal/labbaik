@@ -44,20 +44,21 @@ if ($customer_id) {$v .= '&customer_id=' . $customer_id;}
                 d.<?=$this->security->get_csrf_token_name();?> = "<?=$this->security->get_csrf_hash()?>";
             }},
             "buttons": [
-            { extend: 'copyHtml5', exportOptions: { columns: [ 0, 1] } },
-            { extend: 'excelHtml5', 'footer': true, exportOptions: { columns: [ 0, 1] } },
-            { extend: 'csvHtml5', 'footer': true, exportOptions: { columns: [ 0, 1] } },
+            { extend: 'copyHtml5', exportOptions: { columns: [ 1, 2, 3, 4, 5, 6,7, 8] } },
+            { extend: 'excelHtml5', 'footer': true, exportOptions: { columns: [ 1, 2, 3, 4, 5, 6,7, 8] } },
+            { extend: 'csvHtml5', 'footer': true, exportOptions: { columns: [ 1, 2, 3, 4, 5, 6,7, 8] } },
             { extend: 'pdfHtml5', orientation: 'landscape', pageSize: 'A4', 'footer': true, 
-            exportOptions: { columns: [ 0, 1 ] } },
+            exportOptions: { columns: [ 1, 2, 3, 4, 5, 6,7, 8 ] } },
             { extend: 'colvis', text: 'Columns'},
             ],
             "columns": [
             { "data": "id", "searchable": false, "visible": false },
             { "data": "name" },
             { "data": "price" },
-            { "data": "hotel" },
-            { "data": "airline" },
+            { "data": "total_days" },
             { "data": "max_capacity" },
+            { "data": "fromdate" },
+            { "data": "todate" },
             { "data": "country" },
             { "data": "city" },
             { "data": "Actions", "searchable": false, "orderable": false },
@@ -113,9 +114,11 @@ if ($customer_id) {$v .= '&customer_id=' . $customer_id;}
                     <th style="width:25px;"><?=lang("id");?></th>
                     <th class="col-xs-1"><?=lang("name");?></th>
                     <th class="col-xs-1"><?=lang("price");?></th>
-                    <th class="col-xs-1"><?=lang("hotel");?></th>
-                    <th class="col-xs-1"><?=lang("airline");?></th>
+                    <th class="col-xs-1"><?=lang("total_days");?></th>
+                    <!--<th class="col-xs-1"><?=lang("airline");?></th>-->
                     <th class="col-xs-1"><?=lang("max_capacity");?></th>
+                    <th class="col-xs-1"><?=lang("fromdate");?></th>
+                    <th class="col-xs-1"><?=lang("todate");?></th>
                     <th class="col-xs-1"><?=lang("country");?></th>
                     <th class="col-xs-1"><?=lang("city");?></th>
                     <th style="width:150px;"><?= lang("actions"); ?></th>
@@ -131,10 +134,12 @@ if ($customer_id) {$v .= '&customer_id=' . $customer_id;}
                     <th style="width:25px;"><?=lang("id");?></th>
                     <th class="col-xs-1">Name</th>
                      <th class="col-xs-1"><?=lang("price");?></th>
-                    <th class="col-xs-1"><?=lang("hotel");?></th>
-                    <th class="col-xs-1"><?=lang("airline");?></th>
+                    <th class="col-xs-1"><?=lang("total_days");?></th>
+                    <!--<th class="col-xs-1"><?=lang("airline");?></th>-->
                     <th class="col-xs-1"><?=lang("max_capacity");?></th>
                     <th class="col-xs-1"><?=lang("country");?></th>
+                    <th class="col-xs-1"><?=lang("fromdate");?></th>
+                    <th class="col-xs-1"><?=lang("todate");?></th>
                     <th class="col-xs-1"><?=lang("city");?></th>
                     <th style="width:150px;"><?= lang("actions"); ?></th>
                 </tr>
