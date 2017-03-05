@@ -590,6 +590,5 @@ $lang['to_date']                    = "To Date";
 $lang['total_days']                 = "Total Days";
 $lang['fromdate']                 = "From";
 $lang['todate']                 = "To";
-$lang['testing']                 = "testing";
 
 
