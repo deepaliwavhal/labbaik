@@ -76,8 +76,18 @@
                     <ul class="navi">
                         <li class="nred"><a class="mm_home" href="<?= base_url(); ?>"><i class="fa fa-dashboard"></i> Dashboard</a></li>
                         <li class="nblue"> <a class="mm_reports" href="<?=site_url('trips');?>"> <i class="fa fa-bar-chart-o"></i> 
-                            <?= lang('Trips'); ?> <span class="pull-right"></span> </a>
-
+                            <?= lang('Trips'); ?> <span class="pull-right"></span> </a></li>
+                        <li class="nblue"> <a class="mm_reports" href="<?=site_url('trips_order');?>"> <i class="fa fa-bar-chart-o"></i> 
+                            <?= lang('trips_order'); ?> <span class="pull-right"></span> </a></li>
+                        <li class="has_submenu nlightblue"> <a class="mm_sales" href="#"> <i class="fa fa-file-text"></i> <?= lang('package'); ?> <span class="pull-right"><b class="fa fa-sort-down"></b></span> </a>
+                            <ul>
+                                <li><a id="sales_index" href="<?= site_url('package_control'); ?>"><?= lang('package_control'); ?></a></li>
+                                <li><a id="sales_add" href="<?= site_url(); ?>"><?= lang('title_of_trips_group'); ?></a></li>
+                                <li class="divider"></li>
+                                <li><a id="sales_quotes" href="<?= site_url(); ?>"><?= lang('reservation'); ?></a></li>
+                                <li><a id="sales_add_quote" href="<?= site_url(); ?>"><?= lang('rooming'); ?></a></li>
+                            </ul>
+                        </li>
                         <li class="has_submenu nlightblue"> <a class="mm_sales" href="#"> <i class="fa fa-file-text"></i> <?= lang('sales'); ?> <span class="pull-right"><b class="fa fa-sort-down"></b></span> </a>
                             <ul>
                                 <li><a id="sales_index" href="<?= site_url('sales'); ?>"><?= lang('list_invoices'); ?></a></li>

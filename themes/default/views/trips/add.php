@@ -7,8 +7,7 @@
     <div class="container">
 
         <?php $attrib = array('class' => 'form-horizontal'); echo form_open("trips/add");?>
-        
-            
+                <?php echo form_hidden('package_group_id', $package_group_id); ?>
                 <div class="form-group">
                     <label for="tour_name"><?= lang("Title"); ?></label>
                     <div class="controls"> <?= form_input('tour_name', (isset($_POST['tour_name']) ? $_POST['tour_name'] : ''), 'class="form-control" id="tour_name"');?>
