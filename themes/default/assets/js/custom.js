@@ -306,7 +306,7 @@ $(document).ready(function() {
     });
 
     $("#addButton").click(function () {
-
+        alert(counter);
         var newTr = $('<tr></tr>').attr("id", counter);
         var row_hrml = '';
 

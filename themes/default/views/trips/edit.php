@@ -5,7 +5,8 @@
 <div class="matter">
     <div class="container">
 
-        <?php $attrib = array('class' => 'form-horizontal'); echo form_open("trips/edit?id=".$id);?>
+        <?php $attrib = array('class' => 'form-horizontal'); echo form_open("trips/edit?id=".$id."&group_id=".$group_id);?>
+        
                 <div class="form-group">
                     <label for="tour_name"><?= lang("Title"); ?></label>
                     <div class="controls"> <?= form_input('tour_name', (isset($_POST['tour_name']) ? $_POST['tour_name'] : $trip->t_name), 'class="form-control" id="tour_name"');?>

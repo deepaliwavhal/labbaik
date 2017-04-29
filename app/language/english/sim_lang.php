@@ -578,8 +578,10 @@ $lang['trip_added']                 = "Trip Successfully Added";
 $lang['add_trip']                   = "Add New Trip";
 $lang['update_trip']                = "Update Trip";
 $lang['trip_updated']               = "Trip Successfully Updated";
-$lang['trip_deleted']               = "Trip Successfully Deleted";
+$lang['trip_status_inactive']       = "Trip Successfully Deleted";
+$lang['trip_status_active']         = "Trip Activated Successfully";
 $lang['alert_x_trip']               = "You are going to remove this Trip. Press OK to proceed and Cancel to Go Back";
+$lang['alert_x_trip_0']          = "You are going to activate this Trip. Press OK to proceed and Cancel to Go Back";
 $lang['delete_trip']                = "Delete Trip";
 $lang['edit_trip']                  = "Edit Trip";
 
@@ -588,8 +590,20 @@ $lang['max_capacity']               = "Maximum Capacity";
 $lang['from_date']                  = "From date";
 $lang['to_date']                    = "To Date";
 $lang['total_days']                 = "Total Days";
-$lang['fromdate']                 = "From";
-$lang['todate']                 = "To";
-$lang['testing']                 = "testing";
-
+$lang['fromdate']                   = "From";
+$lang['todate']                     = "To";
+$lang['trips_order']                = "Trips Order";
+$lang['mobile_no']                  = "Mobile No";
+$lang['cr_cpr']                     = "CR/CPR";
+$lang['assigned_to']                = "Assigned To";
+$lang['trips_order_note']           = "Details of the order";
+$lang['dob']                        = "Date Of Birth";
+$lang['gender']                     = "Gender";
+$lang['order_type']                 = "Order Type";
+$lang['package']                    = "Package";
+$lang['package_control']            = "Package Control";
+$lang['title_of_trips_group']       = "Title of trips group";
+$lang['reservation']                = "Reservation";
+$lang['rooming']                    = "Rooming";
+$lang['package_group_id']           = "Package Group ID";
 

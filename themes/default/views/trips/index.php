@@ -1,35 +1,11 @@
 <?php $v = '';
+$v='id='.$package_group_id;
 if ($customer_id) {$v .= '&customer_id=' . $customer_id;}
 ?>
 
 <script>
     $(document).ready(function() {
         
-
-        function recurring(x) {
-            if( x == '' || x == 0 || x == null) {
-                return '<div class="text-center"><i class="fa fa-times"></i></div>';
-            } else if(x == -1) {
-                return '<div class="text-center"><i class="fa fa-check"></i></div>';
-            } else if(x == 1) {
-                return '<div class="text-center"><?=lang('daily');?></div>';
-            } else if(x == 2) {
-                return '<div class="text-center"><?=lang('weekly');?></div>';
-            } else if(x == 3) {
-                return '<div class="text-center"><?=lang('monthly');?></div>';
-            } else if(x == 4) {
-                return '<div class="text-center"><?=lang('quarterly');?></div>';
-            } else if(x == 5) {
-                return '<div class="text-center"><?=lang('semiannually');?></div>';
-            } else if(x == 6) {
-                return '<div class="text-center"><?=lang('annually');?></div>';
-            } else if(x == 7) {
-                return '<div class="text-center"><?=lang('biennially');?></div>';
-            } else {
-                return '<div class="text-center"><i class="fa fa-times"></i></div>';
-            }
-        }
-
         var inv_id;
 
         var table = $('#fileData').DataTable( {
@@ -40,7 +16,7 @@ if ($customer_id) {$v .= '&customer_id=' . $customer_id;}
             "pageLength": <?=$Settings->rows_per_page;?>,
             "processing": true, "serverSide": true,
             // 'ajax': '<?=site_url('trips/getdatatableajax/' . $v);?>',
-            'ajax' : { url: '<?=site_url('trips/getdatatableajax/' . $v);?>', type: 'POST', "data": function ( d ) {
+            'ajax' : { url: '<?=site_url('trips/getdatatableajax?' . $v);?>', type: 'POST', "data": function ( d ) {
                 d.<?=$this->security->get_csrf_token_name();?> = "<?=$this->security->get_csrf_hash()?>";
             }},
             "buttons": [
@@ -149,7 +125,7 @@ if ($customer_id) {$v .= '&customer_id=' . $customer_id;}
                 </tfoot>
             </table>
         </div>
-        <p><a href="<?=site_url('trips/add');?>" class="btn btn-primary"><?=lang("add_trip");?></a></p>
+        <p><a href="<?=site_url('trips/add?group_id='.$package_group_id);?>" class="btn btn-primary"><?=lang("add_trip");?></a></p>
 
         
         

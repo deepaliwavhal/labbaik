@@ -17,8 +17,10 @@
 </script>
 <?php 
 $m = strtolower($this->router->fetch_class());
+echo "<b>".$m."</b>";
 $v = strtolower($this->router->fetch_method());
 ?>
+
 <script type="text/javascript"  charset="UTF-8">
 	$(document).ready(function() {
 		<?php if($m == 'home') { ?>
