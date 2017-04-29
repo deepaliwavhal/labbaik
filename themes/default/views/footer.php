@@ -17,7 +17,6 @@
 </script>
 <?php 
 $m = strtolower($this->router->fetch_class());
-echo "<b>".$m."</b>";
 $v = strtolower($this->router->fetch_method());
 ?>
 
