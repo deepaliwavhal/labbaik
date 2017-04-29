@@ -55,7 +55,7 @@ class Trips extends MY_Controller {
         $this->datatables
                 
             ->select("{$this->db->dbprefix($tablename)}.t_id as id, t_name as name, t_price as price, DATEDIFF(t_todate, t_fromdate) as total_days, t_max_capacity as max_capacity, t_fromdate as fromdate, t_todate as todate, t_country as country, t_city as city, "
-            . "t_status as status, IF(t_status='0', 'fa-refresh', 'fa-trash-o') as status_class, IF(t_status='0', 'Activate', 'Deactivate') as status_action", FALSE)
+            . "t_status as status, IF(t_status='0', 'fa-undo', 'fa-trash-o') as status_class, IF(t_status='0', 'Activate', 'Deactivate') as status_action", FALSE)
             ->from($tablename)            
             ->join('lb_hotels', 'lb_hotels.h_id=lb_trips.t_hotel', 'left')
             ->join('lb_airlines', 'lb_airlines.a_id=lb_trips.t_airline', 'left')

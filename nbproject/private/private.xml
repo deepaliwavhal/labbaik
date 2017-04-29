@@ -3,19 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/app/controllers/Package_Control.php</file>
-            <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/app/models/Trips_model.php</file>
-            <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/app/controllers/Reports.php</file>
-            <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/themes/default/views/header.php</file>
-            <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/app/language/english/sim_lang.php</file>
-            <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/themes/default/views/sales/add_quote.php</file>
+            <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/themes/default/views/trips/add.php</file>
             <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/app/controllers/Products.php</file>
             <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/themes/default/views/trips/index.php</file>
             <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/app/controllers/Trips_Order.php</file>
             <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/app/controllers/Trips.php</file>
-            <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/themes/default/views/sales/form.php</file>
-            <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/app/models/Titles_model.php</file>
-            <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/themes/default/views/package_control/index.php</file>
+            <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/app/models/Trips_model.php</file>
+            <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/app/controllers/Sales.php</file>
+            <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/app/controllers/Clients.php</file>
+            <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/themes/default/views/footer.php</file>
+            <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/app/models/Sales_model.php</file>
+            <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/app/language/english/sim_lang.php</file>
+            <file>file:/C:/xampp/htdocs/code_igniter/labbaaiikk/themes/default/views/trips/edit.php</file>
         </group>
     </open-files>
 </project-private>
